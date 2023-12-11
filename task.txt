@@ -1,0 +1,51 @@
+ОС Linux;
+язык С++ стандарта 14;
+компилятор gcc или clang;
+система сборки проекта cmake.
+
+Разработать одно консольное приложение, состоящее из двух частей:
+многопоточный сервер обработки команд(в реализации должны быть использованы объекты синхронизации, без использования искусственных задержек usleep(…) и т.д.);
+клиент имеет несколько независимых источников команд (каждый источник — отдельный поток),  поставляет команды на обработку серверу и ждет от него ответа о выполнении каждой команды;
+половина потоков клиента должна отправлять запросы с частотой не менее 100Гц.
+команды должны исполняться асинхронно;
+клиент взаимодействует с сервером напрямую через вызовы его API без использования каких-либо коммуникационных протоколов;
+определение команды представляется на Ваше усмотрение;
+реализация нагрузочного алгоритма сервера представляется на Ваше усмотрение;
+приложение должно завершаться корректно по окончанию исполнения всех команд
+
+Ввод и вывод информации на консоль:
+ввод параметров — на Ваше усмотрение;
+старт: количество клиентов;
+результат (сервер): количество клиентов, общее количество принятых и исполненных команд, максимальная задержка исполнения команды;
+результат (клиент): по записи на каждый поток — количество отправленных и обработанных команд;
+результат (приложение): время работы приложения (в миллисекундах) от момента старта;
+
+ Разработать модульный тест используя фреймворк Google Test, покрывающий один наиболее важный (на Ваш взгляд) алгоритм.
+ 
+ 
+ Linux OS;
+C++ language standard 14;
+gcc or clang compiler;
+cmake project build system.
+
+
+Develop one console application consisting of two parts:
+multithreaded command processing server(the implementation should use synchronization objects, without using artificial delays usleep(...) etc.);
+the client has several independent command sources (each source is a separate thread), supplies commands to the server for processing and waits for its response about execution of each command;
+half of the client threads must send requests with a frequency of at least 100Hz.
+commands must be executed asynchronously;
+the client communicates with the server directly through its API calls without using any communication protocols;
+the command definition is at your discretion;
+implementation of the server load algorithm is at your discretion;
+the application must terminate correctly when all commands are finished executing
+
+
+Input and output to the console:
+parameter input is at your discretion;
+start: number of clients;
+result (server): number of clients, total number of received and executed commands, maximum delay of command execution;
+result (client): record for each thread - number of commands sent and processed;
+result (application): application runtime (in milliseconds) from the moment of start;
+
+
+ Develop a unit test using Google Test framework, covering one most important (in your opinion) algorithm.

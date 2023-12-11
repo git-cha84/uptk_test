@@ -1,0 +1,19 @@
+############################################################
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html #
+############################################################
+
+BasedOnStyle: Chromium
+Language: Cpp
+Standard: Cpp11
+
+ColumnLimit: 90
+IndentWidth: 4
+
+SpacesBeforeTrailingComments: 4
+ConstructorInitializerIndentWidth: 4
+AccessModifierOffset: -2
+
+AlwaysBreakBeforeMultilineStrings: false
+BinPackArguments: false
+IndentPPDirectives: AfterHash
+UseTab: Never
